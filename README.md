@@ -50,7 +50,7 @@ o._param = "foo";
 ```
 
 ## More code examples
-See `example.js` for more, which comprehensively covers the feature list below with working code examples.
+See [example.js](example.js) for more, which comprehensively covers the feature list below with working code examples.
 
 # Features
 - Prevent accessing missing properties
