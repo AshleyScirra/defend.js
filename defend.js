@@ -207,7 +207,7 @@ function CheckDefendedObjectsUsedCorrectly()
 	}
 }
 
-// Base class for objects to be defended. Objects must derive from this in order to work with debugDefend().
+// Base class for objects to be defended. Objects must derive from this in order to have checks made.
 class DefendedBase {
 	constructor()
 	{
@@ -246,7 +246,7 @@ function Defend(o)
 	if (mode === "defend" && (o instanceof DefendedBase))
 	{
 		// Note if the proxy map entry is already missing, just pass through the object. This is so that
-		// Defend(Defend(new Something())) just passes through on the second call, since
+		// Defend(Defend(New(Something))) just passes through on the second call, since
 		// the object has already finished constructing and has been fully defended already.
 		if (!ctorProxyToObject.has(o))
 			return o;
